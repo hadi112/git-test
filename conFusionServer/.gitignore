@@ -1,1 +1,7 @@
 node_modules
+testdata.txt
+db.json
+bin/cert.csr
+bin/cetificate.pem
+bin/private.key
+sessions
