@@ -5,3 +5,4 @@ bin/cert.csr
 bin/cetificate.pem
 bin/private.key
 sessions
+config.js
