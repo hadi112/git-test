@@ -5,7 +5,7 @@ const Currency = mongoose.Types.Currency;
 
 
 const promotionSchema = new Schema({
-        name:{
+    name:{
         type: String, 
         required: true,
         unique: true

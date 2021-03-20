@@ -10,6 +10,7 @@ var passport = require('passport');
 var authenticate = require('./authenticate');
 var config = require('./config');
 
+var favouriteRouter = require('./routes/favouriteRouter');//favourite router
 var uploadRouter = require('./routes/uploadRouter');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users'); 
@@ -23,7 +24,7 @@ const connect = mongoose.connect(url,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
-  useFindAndModify: false,
+  useFindAndModify: false
 });
 
 connect.then((db) => {
@@ -64,6 +65,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/imageUpload',uploadRouter);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/favourites',favouriteRouter);
 app.use('/dishes',dishRouter);
 app.use('/promotions',promoRouter);
 app.use('/leader',leaderRouter);
